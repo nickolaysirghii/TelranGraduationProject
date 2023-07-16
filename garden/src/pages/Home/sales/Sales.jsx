@@ -1,12 +1,13 @@
 import React from 'react';
-import "./sales.css"
+import "./sales.css";
+import { Link } from 'react-router-dom';
 
 const Sales = () => {
   return (
     <div className='sales'>
     <p className='title'>Sale</p>
     <p className='season'>New season</p>
-    <button>Sale</button>  
+   <Link to="/productSales"><button>Sale</button></Link>   
     <div className='bush'></div>
     
     </div>

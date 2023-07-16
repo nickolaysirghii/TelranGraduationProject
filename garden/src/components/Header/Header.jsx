@@ -1,18 +1,19 @@
 import React from 'react';
 import "./header.css";
-import bag from "../../svg/bag.svg"
+import bag from "../../svg/bag.svg";
+import  { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
     <header className='header'>
-        <a className='logo' href='/'></a>
-        <button>Catalog</button>
+        <Link to="/" className='logo'></Link>
+        <Link to="/categories"><button>Catalog</button></Link>
         <div className='links'>
-            <a>Main Page</a>
-            <a className='products'>All products</a>
-            <a>All sales</a>
+            <Link to="/">Main Page</Link>
+            <Link to="/allProducts" className='products'>All products</Link>
+            <Link to="/productSales">All sales</Link>
         </div>
-        <img src={bag} alt='bag' className='bag'/>
+       <Link to="/cart"><img src={bag} alt='bag' className='bag'/></Link>
     </header>
   )
 }

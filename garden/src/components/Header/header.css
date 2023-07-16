@@ -37,6 +37,9 @@ cursor: pointer;
     justify-content: space-between;
     cursor: pointer;
 }
+.links a{
+    text-decoration: none;
+}
 .products{
     margin-left: 20px;
     
@@ -44,5 +47,6 @@ cursor: pointer;
 .bag{
     position: absolute;
     right: 0;
+    top: 21px;
     cursor: pointer;
 }
