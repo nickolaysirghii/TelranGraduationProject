@@ -1,7 +1,6 @@
 .tools{
     width: 1440px;
     height: 1100px;
-    border: 1px solid red;
     position: relative;
 }
 .titleTools{
@@ -15,7 +14,6 @@
 .toolsForm{
     width: 1440px;
     height: 50px;
-    border: 1px solid red;
     position: absolute;
     top: 180px;
     display: flex;
@@ -47,9 +45,13 @@
 .toolContainer{
     width: 1440px;
     height: 860px;
-    border: 1px solid black;
     position: absolute;
     top: 240px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 35px;
+    padding-left: 39px;
+    padding-right: 33px;
 }
 .disItems{
     margin-left: 37px;
@@ -62,4 +64,25 @@
     border-radius: 10px;
     margin-left: 32px;
 
+}
+.sortedTools{
+    margin-left: 85px;
+    font-weight: 900;
+    font-size: 22px;
+}
+.sortedInput{
+    margin-left: 42px;
+    background-color: transparent;
+    width: 220px;
+    height: 94%;
+    border-radius: 10px;
+    padding-left: 10px;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    color: gray;
+}
+.toolContainer div{
+    width: 300px;
+    height: 400px;
+    border: 1px solid red;
 }

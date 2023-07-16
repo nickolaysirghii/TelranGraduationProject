@@ -18,7 +18,6 @@
 position: absolute;
 top: 0;
 width: 1440px;
-height: 3325px;
 background-size: contain;
-background-image: url(../public/images/tools.png);
+/* background-image: url(../public/images/cart.png); */
 }
