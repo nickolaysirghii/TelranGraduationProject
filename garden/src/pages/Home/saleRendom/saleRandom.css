@@ -1,0 +1,27 @@
+.saleRandom{
+    width: 1440px;
+    height: 540px;
+    background-size: contain;
+    position: relative;
+}
+.saleRandom h2{
+    position: absolute;
+    top: 50px;
+    left: 30px;
+    font-size: 45px;
+
+}
+.randomContainer{
+    width: 1030px;
+    height: 370px;
+    position: absolute;
+    top: 121px;
+    left: 30px ;
+    display: flex;
+    justify-content: space-between;
+}
+.randomContainer div{
+    width: 320px;
+    height: 100%;
+    border: 2px solid rgb(255, 47, 89);
+}

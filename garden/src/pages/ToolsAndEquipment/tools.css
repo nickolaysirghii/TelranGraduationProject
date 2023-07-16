@@ -1,0 +1,65 @@
+.tools{
+    width: 1440px;
+    height: 1100px;
+    border: 1px solid red;
+    position: relative;
+}
+.titleTools{
+    position: absolute;
+    top: 53px;
+    left: 30px;
+    font-weight: bold;
+    letter-spacing: 2.3px;
+    font-size: 40px;
+}
+.toolsForm{
+    width: 1440px;
+    height: 50px;
+    border: 1px solid red;
+    position: absolute;
+    top: 180px;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+
+}
+.toolPrice{
+    font-size: 22px;
+    font-weight: 700;
+
+}
+.from{
+    height: 94%;
+    width: 105px;
+    border-radius: 10px;
+    margin-left: 15px;
+    background-color: transparent;
+    padding-left: 8px;
+}
+.to{
+    height: 94%;
+    width: 105px;
+    border-radius: 10px;
+    margin-left: 13px;
+    background-color: transparent;
+    padding-left: 8px;
+}
+.toolContainer{
+    width: 1440px;
+    height: 860px;
+    border: 1px solid black;
+    position: absolute;
+    top: 240px;
+}
+.disItems{
+    margin-left: 37px;
+    font-size: 22px;
+    font-weight: 800;
+}
+.checkBox{
+    width: 50px;
+    height: 100%;
+    border-radius: 10px;
+    margin-left: 32px;
+
+}
