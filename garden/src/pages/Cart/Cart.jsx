@@ -1,15 +1,20 @@
 import React from 'react';
 import "./cart.css";
 import CartProduct from './CartProduct/CartProduct';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
 
 const Cart = () => {
   return (
     <div className='cart'>
         <h2 className='cartTitle'>Shopping cart</h2>
         <p className='backToStore'>Back to the store</p>
-        <p className='letAngle'>o</p>
+        <FontAwesomeIcon className='letAngle' icon={faAngleRight} />
         <div className='cartContainer'>
   
+         <CartProduct />
+         <CartProduct />
+         <CartProduct />
          <CartProduct />
        
          </div>
