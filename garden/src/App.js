@@ -6,7 +6,7 @@ import { Route, Routes } from 'react-router-dom';
 import { pagesData } from "./data/routsData"
 
 function App() {
-  return (
+ return (
     <div className="App">
       <div className='container'>
       <Header />

@@ -1,33 +1,26 @@
 import React from 'react';
 import "./cartProduct.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faXmark } from '@fortawesome/free-solid-svg-icons'
-import { useState } from 'react';
-
-const CartProduct = () => {
-  let [amount , setAmount] = useState(1)
-  const increase =()=>{
-    setAmount(amount += 1)
-  }
-  const decrease =()=>{
-    if(amount > 1){
-    setAmount(amount -= 1)
-  }
-  }
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
+const CartProduct = ({element}) => {
+ const {discont_price,price} = element;
   
   return (
     <div className='cartProduct'>
         <div className='cartImageProduct'></div>
         <div className='desProCart'>Curb</div>
         <div className='amount'>
-            <p className='decrees'onClick={decrease} >-</p>
-            <p className='amountNumber'>{amount}</p>
-            <p className='increase' onClick={increase} >+</p>
+            <p className='decrees'>-</p>
+            <p className='amountNumber'></p>
+            <p className='increase' >+</p>
         </div>
-        <p className='cartProdPrice'>199
+        <p className='cartProdPrice'>{price}
         <span className='dollar33'>$</span>
         </p>
-        <p className='oldPriceCart'>250$</p>
+        {
+         discont_price && <p className='oldPriceCart'>{`${discont_price}$`}</p>
+        }
+        
         <FontAwesomeIcon className='deleteProdCart' icon={faXmark} />
     </div>
   )
