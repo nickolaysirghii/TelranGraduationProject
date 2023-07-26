@@ -11,8 +11,8 @@ top: 34px;
 left: 3px;
 width: 200px;
 height: 180px;
-border: 1px solid red;
-background-color: rgb(100, 100, 172);
+background-size: contain;
+background-repeat: no-repeat;
 }
 .desProCart{
     position: absolute;

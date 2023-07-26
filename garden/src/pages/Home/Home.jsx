@@ -6,7 +6,7 @@ import Discount from './discount/Discount';
 import SaleRandom from './saleRendom/SaleRandom';
 
 const Home = () => {
-  return (
+ return (
     <div className='home'>
       <Sales />
       <Catalog />

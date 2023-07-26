@@ -1,0 +1,21 @@
+.catIndex{
+    height: 450px;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.indexImage{
+    width: 100%;
+    height: 350px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.catIndex p{
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 900;
+    margin-left: 40px;
+    margin-right: 40px;
+
+}

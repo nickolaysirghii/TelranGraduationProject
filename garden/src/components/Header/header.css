@@ -50,3 +50,20 @@ cursor: pointer;
     top: 21px;
     cursor: pointer;
 }
+.cartAmount{
+    position: absolute;
+    right: 20px;
+    top: 35px;
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #FFF;
+    border-radius: 50px;
+}
+.cartHidden{
+ visibility: hidden;
+}

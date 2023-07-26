@@ -22,6 +22,17 @@
     padding-left: 30px;
 
 }
+.toolsForm button{
+    color: green;
+    height: 85%;
+    margin-left: 30px;
+    width: 100px;
+    font-weight: 600;
+    background-color:  #F1FFF1;
+    border: 2px solid green;
+    border-radius: 20px;
+    cursor: pointer;
+}
 .toolPrice{
     font-size: 22px;
     font-weight: 700;

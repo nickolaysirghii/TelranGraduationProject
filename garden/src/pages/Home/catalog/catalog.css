@@ -4,6 +4,7 @@
     background-size: contain;
     position: relative;
     padding: 30px;
+    
 }
 .catalogTitle{
     position: absolute;
@@ -31,13 +32,4 @@
     top: 110px;
     display: flex;
     justify-content: space-between;
-}
-.catalogContainer div{
-    height: 450px;
-    width: 320px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid black;
-
 }

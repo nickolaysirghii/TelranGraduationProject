@@ -4,7 +4,8 @@ import { useSelector } from 'react-redux';
 import EveryProduct from '../AllProducts/EveryProduct/EveryProduct';
 
 const ProductSales = () => {
-  const products  = useSelector((state)=>state.number.data1)
+  const productsSales = useSelector((state)=>state.productsAll.products)
+
   return (
     <div className='tools'>
         < h2 className='titleTools'>Products with sale</h2>
@@ -19,7 +20,7 @@ const ProductSales = () => {
         </form>
         <div className='toolContainer'>
         {
-        products.map((elem , idx)=>{
+        productsSales.map((elem , idx)=>{
           if(elem.discont_price){
           return <EveryProduct element = {elem} key={idx}>{}</EveryProduct>
         }

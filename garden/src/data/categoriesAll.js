@@ -26,12 +26,5 @@
         "image": "/category_img/4.jpeg",
         "createdAt": "2022-10-02T14:43:29.000Z",
         "updatedAt": "2022-10-02T14:43:29.000Z"
-    },
-    {
-        "id": 5,
-        "title": "Seasonal",
-        "image": "/category_img/5.jpeg",
-        "createdAt": "2022-10-02T14:43:29.000Z",
-        "updatedAt": "2022-10-02T14:43:29.000Z"
     }
 ]

@@ -3,14 +3,15 @@
     height: 400px;
     margin-bottom: 20px;
     position: relative;
-    border: 1px solid red
 }
 .imageProduct{
     width: 100%;
     height: 300px;
-    border: 3px solid black;
     margin-top: 20px;
     position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+
 }
 
 .addToTheCatr{
@@ -28,6 +29,53 @@
     background: #F1FFF1;
     cursor: pointer;
     visibility: hidden;
+
+}
+.added{
+    position: absolute;
+    background-color: transparent;
+    top: 187px;
+    left: 5px;
+    width: 280px;
+    height: 73px;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(141, 153, 51);
+    border: 2px solid rgb(153, 51, 78);
+    background: #F1FFF1;
+    cursor: pointer;
+
+}
+.amOf{
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    position: absolute;
+    background-color: #FF32A1;
+    top: 0;
+    right: 0;
+    color: #F1FFF1;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+
+}
+.amOf2{
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    position: absolute;
+    background-color: #FF32A1;
+    top: 0;
+    right: 0;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }
 .imageProduct:hover .addToTheCatr{

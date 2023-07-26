@@ -1,7 +1,7 @@
 .saleRandom{
     width: 1440px;
     height: 540px;
-    background-size: contain;
+    background-size: cover;
     position: relative;
 }
 .saleRandom h2{
@@ -20,8 +20,14 @@
     display: flex;
     justify-content: space-between;
 }
-.randomContainer div{
+
+.randomePicture{
     width: 320px;
     height: 100%;
     border: 2px solid rgb(255, 47, 89);
+}
+.randomePicture div{
+    width: 100%;
+    height: 275px;
+    border: 1px solid black;
 }
