@@ -20,7 +20,7 @@ const CartProduct = ({element,idx}) => {
  
   return (
     <div className='cartProduct'>
-        <div className='cartImageProduct'style={{backgroundImage:`url(${element.image})`}}></div>
+        <div className='cartImageProduct'style={{backgroundImage:`url(http://localhost:3333/${element.image})`}}></div>
         <div className='desProCart'>{element.title}</div>
         <div className='amount'>
             <p className='decrees' onClick={decrease}>-</p>

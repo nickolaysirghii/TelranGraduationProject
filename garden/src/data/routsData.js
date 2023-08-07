@@ -1,10 +1,11 @@
 import Home from "../pages/Home/Home";
-import AllProducts from "../pages/AllProducts/AllProducts";
 import Cart from "../pages/Cart/Cart";
 import Categories from "../pages/Categories/Categories";
+import GeneralPage from "../pages/GeneralPage/GeneralPage";
 import EachProduct from "../pages/EachProduct/EachProduct";
-import ProductSales from "../pages/ProductsSales/ProductSales";
-import Tools from "../pages/ToolsAndEquipment/Tools";
+import Allproducts1 from "../pages/AllProducts/Allproducts1";
+import AllSales1 from "../pages/AllSales/AllSales1";
+import CategoryProducts from "../pages/CategoryProducts/CategoryProducts";
 
 
 export const pagesData = 
@@ -18,38 +19,46 @@ export const pagesData =
     },
     {
         "id":2,
-        "name": "All Products",
-        "path": "/allProducts",
-        "element":AllProducts,
-    },
-    {
-        "id":3,
         "name": "Cateories",
         "path": "/categories",
         "element":Categories,
     },
     {
-        "id":4,
-        "name": "Product sales",
-        "path": "/productSales",
-        "element":ProductSales,
-    },
-    {
-        "id":5,
-        "name": "Tools and equipment",
-        "path": "/ToolsAndEquipment",
-        "element":Tools,
-    },
-    {
-        "id":6,
-        "name": "Each product",
-        "path": "/product",
-        "element":EachProduct,
-    },
-    {
-        "id":7,
+        "id":3,
         "name": "Cart",
         "path": "/cart",
         "element":Cart,
-    }
+    },
+    {
+        "id":4,
+        "name": "GeneralPage",
+        "path": "/generalPage",
+        "element":GeneralPage,
+    },
+    {
+        "id":4,
+        "name": "eachProduct",
+        "path": "/eachProduct",
+        "element":EachProduct,
+    },
+    {
+        "id":4,
+        "name": "AllProducts",
+        "path": "/products/all",
+        "element":Allproducts1,
+    },
+    {
+        "id":4,
+        "name": "AllSales",
+        "path": "/sales/all",
+        "element":AllSales1,
+    },
+    {
+        "id":4,
+        "name": "CategoryProducts",
+        "path": "/categories/:id",
+        "element": CategoryProducts,
+    },
+   
+  
 ];

@@ -4,6 +4,10 @@ import {  useSelector , useDispatch } from "react-redux"
 import { add_to_cart } from '../../reduxStore/slice/products_all';
 
 const EachProduct = () => {
+
+ 
+
+
   const productObject = useSelector((state)=>state.eachPro.eachProd);
   const percent = (productObject.price / productObject.discont_price);
   const dispatcher = useDispatch();
@@ -14,7 +18,7 @@ const EachProduct = () => {
  return (
     <div className='eachProduct'>
         <div className='eachPrTitle'>{productObject.title}</div>
-        <div className='productPicture' style={{backgroundImage: `url(${productObject.image})` }}></div>
+        <div className='productPicture' style={{backgroundImage: `url(http://localhost:3333/${productObject.image})` }}></div>
         <h2 className='priceProduct'>{productObject.discont_price}
                <span className='dolars'>$</span>
         </h2>

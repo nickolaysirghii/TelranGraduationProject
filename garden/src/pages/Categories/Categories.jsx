@@ -1,16 +1,18 @@
 import React from 'react';
 import "./categories.css";
-import { categoriesAll } from "../../data/categoriesAll";
+import { useSelector} from "react-redux";
+import EachCat from './EachCat/EachCat';
 
 const Categories = () => {
-  console.log(categoriesAll)
+  const cat2 = useSelector((state)=>state.category.category);
+
   return (
     <div className='categories'>
       <h2>Categories</h2>
       <div className='catContainer'>
         {
-          categoriesAll.map((elem,idx)=>{
-            return <div key={idx}>{elem.title}</div>
+          cat2.map((elem,idx)=>{
+            return <EachCat id={elem.id} title={elem.title} image={elem.image} key={idx}>{elem.title}</EachCat>
           })
         }
       </div>
