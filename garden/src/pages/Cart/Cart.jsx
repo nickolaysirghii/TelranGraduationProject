@@ -5,8 +5,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import { useSelector } from "react-redux";
 
+
 const Cart = () => {
   const cartProucts = useSelector((state)=>state.productsAll.products)
+
+
+
   let car = 0;
   cartProucts.forEach((elem) => {
     if(elem.amount){

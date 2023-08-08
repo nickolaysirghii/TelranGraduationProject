@@ -2,7 +2,9 @@ import React from 'react';
 import "./generalPage.css";
 import EveryProduct from './EveryProduct/EveryProduct';
 
+
 const GeneralPage = ({title,data}) => {
+  
    return (
         <div className='tools'>
             < h2 className='titleTools'>{title}</h2>

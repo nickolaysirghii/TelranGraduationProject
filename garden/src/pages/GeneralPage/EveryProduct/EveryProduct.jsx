@@ -21,19 +21,10 @@ e.stopPropagation()
 const detailed = ()=>{
   dispatcher(changeObject(element))
 }
+
   return (
         <div className='every'>
-            <Link to="/eachProduct"> <div onClick={detailed} className='imageProduct' style={{backgroundImage:`url(http://localhost:3333/${element.image})`}} >
-              <button className={element.amount ? "added" : 'addToTheCatr' }
-               onClick={addKeyToIt}>
-              {element.amount ? "Added to cart" : "Add to cart"}
-              {
-                <div className={element.amount ? "amOf2" : "amOf"}>{
-                 element.amount
-                }</div>
-              }
-              
-              </button>
+             <Link to="/eachProduct"><div onClick={detailed} className='imageProduct' style={{backgroundImage:`url(http://localhost:3333/${element.image})`}} >
             </div></Link>
             <p className='priceProduct2'>{price} 
             <span>$</span>
@@ -48,6 +39,15 @@ const detailed = ()=>{
             </p>
             }
             <p className='productTitle'>{title.length > 25 ? short : title}</p>
+            <button className={element.amount ? "showNewButton" : 'NewButton' }
+             onClick={addKeyToIt}>
+              {element.amount ? "Added to cart" : "Add to cart"}
+              
+                <div className={element.amount ? "amOf2" : "amOf"}>{
+                 element.amount
+                }</div>
+              
+              </button>
         </div>
       )
 }
