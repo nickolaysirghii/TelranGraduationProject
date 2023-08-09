@@ -4,14 +4,13 @@ import CartProduct from './CartProduct/CartProduct';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom"
 
 
 const Cart = () => {
-  const cartProucts = useSelector((state)=>state.productsAll.products)
+  const cartProucts = useSelector((state)=>state.productsAll.products);
 
-
-
-  let car = 0;
+let car = 0;
   cartProucts.forEach((elem) => {
     if(elem.amount){
     car = car + (elem.price * elem.amount)
@@ -22,7 +21,7 @@ return (
     <div className='cart'>
         <h2 className='cartTitle'>Shopping cart</h2>
         <p className='backToStore'>Back to the store</p>
-        <FontAwesomeIcon className='letAngle' icon={faAngleRight} />
+        <Link to="/"><FontAwesomeIcon className='letAngle' icon={faAngleRight} /></Link>
         <div className='cartContainer'>
   
         {

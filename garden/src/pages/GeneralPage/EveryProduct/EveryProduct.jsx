@@ -12,11 +12,9 @@ const EveryProduct = ({element}) => {
 const dispatcher = useDispatch();
 const short = `${title.slice(0,25)}...`
 
-const addKeyToIt = (e)=>{
+const addKeyToIt = ()=>{
 dispatcher(add_to_cart(element.id -1));
 dispatcher(productCart(element));
-e.stopPropagation()
-
 }
 const detailed = ()=>{
   dispatcher(changeObject(element))

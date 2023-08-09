@@ -9,7 +9,9 @@ export const categoryName = createSlice({
     initialState,
     reducers:{
         changeCatName: (state , action)=>{
-            state.catName = action.payload
+           
+                state.catName = action.payload
+
         }
     }
 });

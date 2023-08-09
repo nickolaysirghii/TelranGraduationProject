@@ -6,6 +6,7 @@ import Discount from './discount/Discount';
 import SaleRandom from './saleRendom/SaleRandom';
 
 const Home = () => {
+  localStorage.removeItem("eachProduct")
  return (
     <div className='home'>
       <Sales />
