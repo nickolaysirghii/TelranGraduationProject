@@ -1,26 +1,53 @@
 import React from 'react'; 
 import "./generalPage.css";
 import EveryProduct from './EveryProduct/EveryProduct';
+import { useSelector,useDispatch } from 'react-redux';
+import { fromData , toData , checkData , sortedData } from '../../reduxStore/slice/inputSlice';
 
 
 const GeneralPage = ({title,data}) => {
-  
-   return (
+
+const dispatcher = useDispatch();
+const from1 = useSelector((state)=>state.inputs);
+const {from , to , check2 } = from1
+
+const fromFunction = (e)=>{
+  const data = e.target.value;
+  dispatcher(fromData(data))
+}
+const toFunction =(e)=>{
+  const data =e.target.value;
+  dispatcher(toData(data))
+}
+const checkFunction = ()=>{
+  dispatcher(checkData())
+}
+const sortedFunction = (e)=>{
+  const data = e.target.value;
+  dispatcher(sortedData(data))
+}
+
+return (
         <div className='tools'>
             < h2 className='titleTools'>{title}</h2>
             <form className='toolsForm'>
                 <p className='toolPrice'>Price</p>
-                     <input className='from' type='text' placeholder='from' />
-                     <input className='to' type='text' placeholder='to' />
+                     <input  onChange={fromFunction}  className='from' type='text' placeholder='from'/>
+                     <input  onChange={toFunction} className='to' type='text' placeholder='to' />
                 <p className='disItems'>Discounted items</p>
-                     <input className='checkBox' type='checkBox' />
+                     <input onChange={checkFunction} className='checkBox' type='checkBox'/>
                 <p className='sortedTools'>Sorted</p>
-                    <input className='sortedInput' placeholder='by default' type='number'/>
+                    <input onChange={sortedFunction} className='sortedInput' placeholder='by default' type='text'/>
             </form>
             <div className='toolContainer'>
             {
+
               data && data.map((elem , idx)=>{
+                if(elem.price >= from && elem.price <= to && elem.discont_price >= check2){
               return <EveryProduct index={idx} element = {elem} key={idx}>{}</EveryProduct>
+            }else{
+              return null
+            }
             })
            }
             </div>
