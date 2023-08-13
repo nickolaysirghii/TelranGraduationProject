@@ -9,8 +9,9 @@ import { changeCatName } from '../../../reduxStore/slice/catName';
 const EachCat = ({id,title,image}) => {
   const dispatcher = useDispatch();
   const chageEachCategory = ()=>{
+    const ddaata = [id,title]
     dispatcher(fetchEachCategories(id))
-    dispatcher(changeCatName(title))
+    dispatcher(changeCatName(ddaata))
 
   }
   return (

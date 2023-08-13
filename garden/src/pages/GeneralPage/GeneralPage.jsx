@@ -9,7 +9,13 @@ const GeneralPage = ({title,data}) => {
 
 const dispatcher = useDispatch();
 const from1 = useSelector((state)=>state.inputs);
-const {from , to , check2 } = from1
+const {from , to , check2 , sorted } = from1
+let final = [];
+if(sorted.length === 0){
+  final = data
+}else{
+  final = sorted
+};
 
 const fromFunction = (e)=>{
   const data = e.target.value;
@@ -23,8 +29,12 @@ const checkFunction = ()=>{
   dispatcher(checkData())
 }
 const sortedFunction = (e)=>{
-  const data = e.target.value;
-  dispatcher(sortedData(data))
+  const data22 = e.target.value;
+  const send = {
+    status: data22,
+    data1: data
+  }
+  dispatcher(sortedData(send))
 }
 
 return (
@@ -42,7 +52,7 @@ return (
             <div className='toolContainer'>
             {
 
-              data && data.map((elem , idx)=>{
+              final && final.map((elem , idx)=>{
                 if(elem.price >= from && elem.price <= to && elem.discont_price >= check2){
               return <EveryProduct index={idx} element = {elem} key={idx}>{}</EveryProduct>
             }else{

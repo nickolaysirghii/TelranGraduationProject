@@ -8,8 +8,9 @@ import { changeCatName } from "../../../../reduxStore/slice/catName";
 const CatalogIndex = ({elem}) => { 
   const dispatcher = useDispatch();
   const changeCat_cat = ()=>{
+    const ddd = [elem.id, elem.title]
     dispatcher(fetchEachCategories(elem.id))
-    dispatcher(changeCatName(elem.title))
+    dispatcher(changeCatName(ddd))
   }
   
 
