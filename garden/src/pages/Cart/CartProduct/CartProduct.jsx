@@ -31,7 +31,7 @@ const CartProduct = ({element,idx}) => {
         <span className='dollar33'>$</span>
         </p>
         {
-         discont_price && <p className='oldPriceCart'>{`${discont_price}$`}</p>
+         discont_price && <p className='oldPriceCart'>{`${(discont_price*amount).toFixed(2)}$`}</p>
         }
         
         <FontAwesomeIcon className='deleteProdCart' icon={faXmark} onClick={delIt} />

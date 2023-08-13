@@ -6,7 +6,8 @@ import { createSlice , createAsyncThunk } from "@reduxjs/toolkit";
 const initialState = {
     products: [],
     status: null,
-    error: null
+    error: null,
+    post: []
 
 };
 export const fetchProducts = createAsyncThunk(
@@ -23,6 +24,22 @@ export const fetchProducts = createAsyncThunk(
     }
     }
 );
+export const postDiscount = createAsyncThunk(
+    'products/postDiscount',
+    async function (ddaata){
+       fetch("https://fakestoreapi.com/products",
+       {
+        method: "POST",
+        body: JSON.stringify(ddaata)
+       })
+       .then(res=>res.json())
+       .then(json => {
+        console.log(json)
+        return json
+        
+       })
+    }
+)
 export const productsSlice = createSlice({
     name: "products",
     initialState,
@@ -72,6 +89,10 @@ export const productsSlice = createSlice({
         [fetchProducts.rejected]: (state)=>{
             state.status = "rejected";
             state.data = []
+        },
+        [postDiscount.fulfilled]: (state , action)=>{
+            state.post = action.payload
+           
         }
 }
 });
