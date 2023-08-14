@@ -13,9 +13,10 @@ const Cart = () => {
 let car = 0;
   cartProucts.forEach((elem) => {
     if(elem.amount){
-    car = car + (elem.price * elem.amount)
+    car = car + ( (elem.discont_price ? elem.discont_price : elem.price )* elem.amount)
     }
   })
+  
 
 return (
     <div className='cart'>

@@ -2,7 +2,8 @@ import React from 'react';
 import "./generalPage.css";
 import EveryProduct from './EveryProduct/EveryProduct';
 import { useSelector,useDispatch } from 'react-redux';
-import { fromData , toData , checkData , sortedData } from '../../reduxStore/slice/inputSlice';
+import { fromData , toData , checkData  } from '../../reduxStore/slice/inputSlice';
+import { sortAllProducts } from "../../reduxStore/slice/products_all"
 
 
 const GeneralPage = ({title,data}) => {
@@ -30,11 +31,7 @@ const checkFunction = ()=>{
 }
 const sortedFunction = (e)=>{
   const data22 = e.target.value;
-  const send = {
-    status: data22,
-    data1: data
-  }
-  dispatcher(sortedData(send))
+ dispatcher(sortAllProducts(data22))
 }
 
 return (
@@ -47,7 +44,12 @@ return (
                 <p className='disItems'>Discounted items</p>
                      <input onChange={checkFunction} className='checkBox' type='checkBox'/>
                 <p className='sortedTools'>Sorted</p>
-                    <input onChange={sortedFunction} className='sortedInput' placeholder='by default' type='text'/>
+                    <select onChange={sortedFunction} className='sortedInput' placeholder='by default' type='text'>
+                      <option value="third">By default</option>
+                      <option value="first"> From Lower Price</option>
+                      <option value="second">From Higher Price</option>
+                      
+                    </select>
             </form>
             <div className='toolContainer'>
             {

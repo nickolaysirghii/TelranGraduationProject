@@ -27,11 +27,11 @@ const CartProduct = ({element,idx}) => {
             <p className='amountNumber'>{amount}</p>
             <p className='increase'onClick={increase} >+</p>
         </div>
-        <p className='cartProdPrice'>{(price*amount).toFixed(2)}
+        <p className='cartProdPrice'>{discont_price ? (discont_price*amount).toFixed(2) : (price*amount).toFixed(2)}
         <span className='dollar33'>$</span>
         </p>
         {
-         discont_price && <p className='oldPriceCart'>{`${(discont_price*amount).toFixed(2)}$`}</p>
+         discont_price && <p className='oldPriceCart'>{`${(price*amount).toFixed(2)}$`}</p>
         }
         
         <FontAwesomeIcon className='deleteProdCart' icon={faXmark} onClick={delIt} />

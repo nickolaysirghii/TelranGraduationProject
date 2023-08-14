@@ -75,6 +75,15 @@ export const productsSlice = createSlice({
         },
         increase_cart_amount: (state,action)=>{
             state.products[action.payload].amount += 1
+        },
+        sortAllProducts: (state , action )=>{
+            if(action.payload === "first"){
+             state.products.sort((a,b)=>a.price - b.price)
+            }else if(action.payload === "second"){
+             state.products.sort((a,b)=>b.price - a.price)
+            }else if(action.payload === "third"){
+             state.products.sort((a,b)=>a.id - b.id)
+            }
         }
     },
     extraReducers:{
@@ -96,5 +105,5 @@ export const productsSlice = createSlice({
         }
 }
 });
-export const {add_to_cart , delete_from_the_cart , decrease_card_amount , increase_cart_amount } = productsSlice.actions;
+export const {sortAllProducts ,add_to_cart , delete_from_the_cart , decrease_card_amount , increase_cart_amount } = productsSlice.actions;
 export default productsSlice.reducer;
